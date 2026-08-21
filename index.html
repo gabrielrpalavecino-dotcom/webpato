@@ -7,6 +7,30 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
     <style>
+        /* FONDO GLOBAL NUEVO — DEGRADADO NARANJA PIEL CON TRANSICIÓN */
+        body {
+            margin: 0;
+            background: linear-gradient(180deg, #f2b38f, #ffe7d6);
+            animation: fondoSuave 12s ease-in-out infinite alternate;
+            transition: background 1s ease-in-out;
+        }
+
+        /* ANIMACIÓN GRADUAL */
+        @keyframes fondoSuave {
+            0% {
+                background: linear-gradient(180deg, #f2b38f, #ffe7d6);
+            }
+
+            50% {
+                background: linear-gradient(180deg, #f7c7a8, #fff3e8);
+            }
+
+            100% {
+                background: linear-gradient(180deg, #f2b38f, #ffe7d6);
+            }
+        }
+
+
         :root {
             --accent: #e91e63;
             --accent-dark: #b3004b;
@@ -57,18 +81,14 @@
         }
 
         /* HERO */
-        .hero {
-            padding: 28px 16px;
-            text-align: center;
-            background: #fff4f6;
-        }
 
         .logo {
-            width: 360px;
-            max-width: 70%;
+            width: 40;
+            max-width: 40%;
             height: auto;
             display: block;
             margin: 0 auto 10px auto;
+            background: transparent !important;
         }
 
         .hero h2 {
