@@ -92,7 +92,7 @@
         }
 
         .hero h2 {
-            margin: 6px 0 12px 0;
+            margin: center;
             color: var(--muted);
             font-weight: 700;
             font-size: 18px;
@@ -424,7 +424,7 @@
     <!-- PRODUCTOS -->
     <section id="productos">
         <div class="container">
-            <h1 style="text-align:center; margin-bottom:12px; color:var(--muted); font-size:20px;">Productos</h1>
+            <h1 style="text-align:center; margin-bottom:12px; color:var(--muted); font-size:60px;">Productos</h1>
 
             <div class="grid">
 
@@ -672,7 +672,7 @@
     <!-- CARRITO -->
     <section id="carrito">
         <div class="container">
-            <h1>Carrito</h1>
+            <h1 style="text-align:center; margin-bottom:12px; color:var(--muted); font-size:60px;">Carrito</h1>
 
             <div id="cart-list" style="margin-bottom:20px;font-size:15px;color:#6b2a3a;">
                 No hay productos en el carrito.
@@ -691,7 +691,8 @@
     <!-- ENVÍOS -->
     <section id="envios">
         <div class="container">
-            <h1>Envíos</h1>
+            <h1 style="text-align:center; margin-bottom:12px; color:var(--muted); font-size:60px;">Envios</h1>
+
             <p>
                 Entregamos en Madrid Centro y alrededores mediante servicios de mensajería
                 (Uber / Bolt / Glovo según producto).
@@ -707,7 +708,7 @@
     <!-- CONTACTO -->
     <section id="contacto">
         <div class="container">
-            <h1>Contacto</h1>
+            <h1 style="text-align:center; margin-bottom:12px; color:var(--muted); font-size:60px;">Contacto</h1>
 
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:1000px;margin:0 auto;">
 
@@ -754,7 +755,8 @@
     <!-- NOSOTROS -->
     <section id="nosotros">
         <div class="container">
-            <h1>Nosotros</h1>
+            <h1 style="text-align:center; margin-bottom:12px; color:var(--muted); font-size:60px;">Nosotros</h1>
+
             <p>
                 Así de Rico es una pastelería artesanal especializada en tartas, alfajores y dulces argentinos.
                 <br><br>
@@ -775,26 +777,25 @@
                 <div class="payment-icons">
 
                     <img src="img/deposito bancario.png" alt="Pago bancario"
-                        style="width:40px;height:40px;border-radius:6px;border:1px solid #ffd6d6;background:#fff;padding:4px;">
+                        style="width:65px;height:65px;border-radius:6px;border:1px solid #ffd6d6;background:#fff;padding:4px;">
 
                     <img src="img/bizum.png" alt="Bizum"
-                        style="width:40px;height:40px;border-radius:6px;border:1px solid #ffd6d6;background:#fff;padding:4px;">
+                        style="width:65px;height:65px;border-radius:6px;border:1px solid #ffd6d6;background:#fff;padding:4px;">
 
                     <img src="img/acordar.png" alt="Acordar pago"
-                        style="width:40px;height:40px;border-radius:6px;border:1px solid #ffd6d6;background:#fff;padding:4px;">
+                        style="width:65px;height:65px;border-radius:6px;border:1px solid #ffd6d6;background:#fff;padding:4px;">
 
                 </div>
-
 
                 <div class="footer-col">
                     <h4>REDES</h4>
                     <div class="payment-icons">
 
                         <img src="img/instagram.png" alt="Instagram"
-                            style="width:40px;height:40px;border-radius:6px;border:1px solid #ffd6d6;background:#fff;padding:4px;">
+                            style="width:65px;height:65px;border-radius:6px;border:1px solid #ffd6d6;background:#fff;padding:4px;">
 
                         <img src="img/facebook.png" alt="Facebook"
-                            style="width:40px;height:40px;border-radius:6px;border:1px solid #ffd6d6;background:#fff;padding:4px;">
+                            style="width:65px;height:65px;border-radius:6px;border:1px solid #ffd6d6;background:#fff;padding:4px;">
 
                         <div class="footer-slim" role="contentinfo">
 
@@ -804,54 +805,57 @@
                                     <h4>CONTACTO</h4>
                                     <div class="payment-icons">
 
-                                        <div class="line">
-                                            <strong>Email:</strong> asidericopasteleria@gmail.com
-                                            <div class="footer-slim" role="contentinfo">
-                                                <div class="left">WhatsApp: +34 622403795</div>
-                                            </div>
+                                        <img src="img/mail.png" alt="mail"
+                                            style="width:65px;height:65px;border-radius:6px;border:1px solid #ffd6d6;background:#fff;padding:4px;">
 
-                                            <div class="footer-slim" role="contentinfo">
+                                        <img src="img/whatsapp.png" alt="WhatsApp"
+                                            style="width:65px;height:65px;border-radius:6px;border:1px solid #ffd6d6;background:#fff;padding:4px;">
 
-                                                <div class="footer-banner">
+                                        <div class="footer-slim" role="contentinfo">
+
+                                            <div class="footer-banner">
+
+                                                <footer>
+                                                    <div class="footer-main">
+                                                        <!-- tus columnas -->
+                                                    </div>
 
                                                     <div class="footer-copy">
                                                         © Así de Rico Bakery · Madrid<br>
                                                         © Krusty Broadcasting web services – Madrid
                                                     </div>
+                                                </footer>
 
-                                                </div>
 
-    </footer>
+                                                <!-- SCRIPT DEL CARRITO -->
+                                                <script>
+                                                    let cart = [];
 
-    <!-- SCRIPT DEL CARRITO -->
-    <script>
-        let cart = [];
+                                                    // Agregar producto al carrito
+                                                    function addToCart(name, price) {
+                                                        cart.push({ name, price });
+                                                        updateCartPage();
+                                                        alert(name + " agregado al carrito");
+                                                    }
 
-        // Agregar producto al carrito
-        function addToCart(name, price) {
-            cart.push({ name, price });
-            updateCartPage();
-            alert(name + " agregado al carrito");
-        }
+                                                    // Actualizar la página del carrito
+                                                    function updateCartPage() {
+                                                        const list = document.getElementById("cart-list");
+                                                        const total = document.getElementById("cart-total");
+                                                        const wa = document.getElementById("cart-whatsapp");
 
-        // Actualizar la página del carrito
-        function updateCartPage() {
-            const list = document.getElementById("cart-list");
-            const total = document.getElementById("cart-total");
-            const wa = document.getElementById("cart-whatsapp");
+                                                        if (cart.length === 0) {
+                                                            list.innerHTML = "No hay productos en el carrito.";
+                                                            total.innerHTML = "Total: €0";
+                                                            wa.href = "https://wa.me/34622403795?text=Carrito%20vacío";
+                                                            return;
+                                                        }
 
-            if (cart.length === 0) {
-                list.innerHTML = "No hay productos en el carrito.";
-                total.innerHTML = "Total: €0";
-                wa.href = "https://wa.me/34622403795?text=Carrito%20vacío";
-                return;
-            }
+                                                        let html = "";
+                                                        let suma = 0;
 
-            let html = "";
-            let suma = 0;
-
-            cart.forEach((item, i) => {
-                html += `
+                                                        cart.forEach((item, i) => {
+                                                            html += `
             <div style="margin-bottom:10px;">
                 ${item.name} — €${item.price}
                 <span onclick="removeItem(${i})"
@@ -860,25 +864,25 @@
                 </span>
             </div>
         `;
-                suma += item.price;
-            });
+                                                            suma += item.price;
+                                                        });
 
-            list.innerHTML = html;
-            total.innerHTML = "Total: €" + suma;
+                                                        list.innerHTML = html;
+                                                        total.innerHTML = "Total: €" + suma;
 
-            let mensaje = "Hola Asiderico, quiero pedir:\n\n";
-            cart.forEach(item => mensaje += `• ${item.name} — €${item.price}\n`);
-            mensaje += `\nTotal: €${suma}`;
+                                                        let mensaje = "Hola Asiderico, quiero pedir:\n\n";
+                                                        cart.forEach(item => mensaje += `• ${item.name} — €${item.price}\n`);
+                                                        mensaje += `\nTotal: €${suma}`;
 
-            wa.href = "https://wa.me/34622403795?text=" + encodeURIComponent(mensaje);
-        }
+                                                        wa.href = "https://wa.me/34622403795?text=" + encodeURIComponent(mensaje);
+                                                    }
 
-        // Eliminar producto del carrito
-        function removeItem(index) {
-            cart.splice(index, 1);
-            updateCartPage();
-        }
-    </script>
+                                                    // Eliminar producto del carrito
+                                                    function removeItem(index) {
+                                                        cart.splice(index, 1);
+                                                        updateCartPage();
+                                                    }
+                                                </script>
 
 </body>
 
