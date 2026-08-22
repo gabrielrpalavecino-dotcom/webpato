@@ -220,30 +220,53 @@
             overflow: hidden;
         }
 
-        .order-btn {
-            background: #e6a172;
-            color: #fff;
-            border: 0;
-            padding: 4px 6px;
+        /* Alineación perfecta de los botones */
+        .card-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        /* Ambos botones iguales */
+        .card-actions a {
+            flex: 1;
+            height: 40px;
+            /* misma altura */
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 8px;
             font-weight: 800;
-            font-size: 10px;
-            text-align: center;
-            cursor: pointer;
+            font-size: 12px;
             text-decoration: none;
         }
 
+        /* Botón descripción */
         .desc-btn {
             background: #e6a172;
-            color: #fff;
-            border: 0;
-            padding: 4px 6px;
-            border-radius: 8px;
-            font-weight: 800;
-            font-size: 10px;
-            text-align: center;
-            cursor: pointer;
-            text-decoration: none;
+            border: none;
+            padding: 0;
+        }
+
+        /* Botón carrito */
+        .order-btn {
+            background: #e6a172;
+            border: none;
+            padding: 0;
+            /* importante para centrar el icono */
+        }
+
+        /* Ícono del carrito centrado */
+        .cart-icon {
+            width: 22px;
+            height: 22px;
+            display: block;
+        }
+
+        .desc-icon {
+            width: 22px;
+            height: 22px;
+            display: block;
         }
 
         /* ========================= */
@@ -372,11 +395,15 @@
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Cuadrados de Brownie — €32</h3>
-                        <p class="card-desc">Brownie húmedo con base crocante y cobertura de chocolate.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc1')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Cuadrados de Brownie', 32)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc1')">
+                                <img src="img/lupa.png" class="cart-icon">
+                                <a class="order-btn" onclick="addToCart('Producto', 16)">
+                                    <img src="img/carro de compras.png" class="cart-icon">
+                                </a>
+
+
                         </div>
 
                         <div id="desc1" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
@@ -397,6 +424,7 @@
                         <div class="card-actions">
                             <a class="desc-btn" onclick="toggleDesc('desc2')">Descripción</a>
                             <a class="order-btn" onclick="addToCart('Mini Frolas', 16)">Agregar al carrito</a>
+
                         </div>
 
                         <div id="desc2" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
@@ -778,8 +806,8 @@
                     <p>Pedidos: 9:00 – 18:00 (Lun a Sáb). Elaboración: Mar a Sáb.</p>
                 </div>
 
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.1234567890123!2d-3.70379028459321!3d40.41677597936444"
+                <iframe src="src="
+                    https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2526.8257495335106!2d-3.655844089306368!3d40.432413554566935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f4861abbf9f%3A0x6fcf49c1fcfffe9a!2sC.%20Alcal%C3%A1%20%26%20C.%20de%20Mateo%20Garc%C3%ADa%2C%20Cdad.%20Lineal%2C%2028027%20Madrid!5e1!3m2!1ses-419!2ses!4v1787413531367!5m2!1ses-419!2ses"
                     width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy">
                 </iframe>
             </div>
@@ -942,7 +970,15 @@
             }
         });
     </script>
-
+    <script>
+        document.getElementById("productSearch").addEventListener("input", function () {
+            const term = this.value.toLowerCase();
+            document.querySelectorAll(".card").forEach(card => {
+                const title = card.querySelector(".card-title").innerText.toLowerCase();
+                card.style.display = title.includes(term) ? "block" : "none";
+            });
+        });
+    </script>
 </body>
 
 </html>
