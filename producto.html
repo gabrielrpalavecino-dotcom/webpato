@@ -2,28 +2,28 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Producto</title>
+    <meta charset="utf-8">
+    <title>Producto — Asiderico</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
         body {
-            font-family: 'Segoe UI', Arial;
             margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #ffe9e2;
             padding: 20px;
-            background: linear-gradient(180deg, #f2b38f, #ffe7d6);
         }
 
         .container {
             max-width: 700px;
             margin: 0 auto;
             background: #fff;
-            padding: 20px;
             border-radius: 12px;
+            padding: 20px;
             border: 1px solid #ffd6d6;
         }
 
-        img {
+        .product-img {
             width: 100%;
             border-radius: 12px;
             margin-bottom: 20px;
@@ -31,69 +31,81 @@
 
         h1 {
             color: #b3004b;
+            font-size: 22px;
             margin-bottom: 10px;
         }
 
-        p {
-            color: #5a2a36;
-            font-size: 15px;
-            line-height: 1.4;
+        .price {
+            font-size: 18px;
+            font-weight: 800;
+            color: #e6a172;
+            margin-bottom: 20px;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 18px;
-            background: #e91e63;
-            color: white;
+        .desc {
+            font-size: 14px;
+            color: #5a2a36;
+            margin-bottom: 30px;
+        }
+
+        .order-btn {
+            background: #e6a172;
+            border: none;
+            padding: 12px 20px;
             border-radius: 10px;
+            color: #fff;
             font-weight: 800;
-            text-decoration: none;
-            margin-top: 20px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            width: fit-content;
+        }
+
+        .order-btn img {
+            width: 22px;
+            height: 22px;
         }
     </style>
 
     <script>
-        // Base de datos de productos
         const productos = {
-            "brownie": {
-                nombre: "Tarta Brownie",
-                precio: 32,
-                desc: "Brownie húmedo con base crocante y cobertura de chocolate.",
-                img: "img/tarta brownie.png"
-            },
-            "frolas": {
-                nombre: "Mini Frolas",
-                precio: 16,
-                desc: "Masa casera con dulce de membrillo, textura hojaldrada.",
-                img: "img/pastafrola de membrillo.png"
-            },
-            "maicena": {
-                nombre: "Alfajores de Maicena",
-                precio: 18,
-                desc: "Clásicos con dulce de leche y coco rallado.",
-                img: "img/alfajores de maicena.png"
-            }
-            // 👉 Aquí agregás todos los demás productos
+            1: { nombre: "Cuadrados de Brownie", precio: 32, desc: "Brownie húmedo con base crocante y cobertura de chocolate.", img: "img/cuadrados de brownie.jpg" },
+            2: { nombre: "Mini Frolas", precio: 16, desc: "Masa casera con dulce de membrillo, textura hojaldrada.", img: "img/pastafrola de membrillo.png" },
+            3: { nombre: "Alfajores de Maicena", precio: 18, desc: "Clásicos con dulce de leche y coco rallado.", img: "img/alfajores de maicena.png" },
+            4: { nombre: "Tarta de Cumpleaños", precio: 60, desc: "Bizcocho esponjoso decorado a pedido, personalizable.", img: "img/tartas de cumple.jpg" },
+            5: { nombre: "Chocotorta", precio: 25, desc: "Capas de galletas con crema y dulce de leche.", img: "img/chocotorta.png" },
+            6: { nombre: "Pastel Primavera", precio: 34, desc: "Bizcocho con frutas frescas y crema ligera.", img: "img/pastel primavera.png" },
+            7: { nombre: "Cuadrados de Limón", precio: 20, desc: "Cuadrados cítricos con glaseado de limón y toque de merengue.", img: "img/cuadrados de limon.png" },
+
+            8: { nombre: "Mini Cakes", precio: 15, desc: "Bizcochos caseros esponjosos, ideales para meriendas.", img: "img/mini cakes.png" },
+            9: { nombre: "Torta Rogel", precio: 29, desc: "Capas finas con dulce de leche y merengue crocante.", img: "img/torta rogel.png" },
+            10: { nombre: "Torta Vintage", precio: 48, desc: "Decoración retro personalizada para eventos.", img: "img/torta vintage.png" },
+            11: { nombre: "Cheesecake", precio: 24, desc: "Cheesecake cremoso con frutos rojos.", img: "img/chessecake con frutos rojos.png" },
+            12: { nombre: "Tarta Brownie XL", precio: 45, desc: "Brownie XL húmedo, intenso y perfecto para compartir.", img: "img/tarta brownie.png" },
+            13: { nombre: "Mix de Alfajores", precio: 22, desc: "Alfajores gourmet bañados en chocolate.", img: "img/mix de alfajores.png" },
+            14: { nombre: "Lemon Pie", precio: 28, desc: "Pie de limón con crema cítrica y merengue italiano dorado.", img: "img/Lemon pie.png" },
+            15: { nombre: "Cookies Artesanales", precio: 12, desc: "Cookies caseras con chips de chocolate.", img: "img/cookies artesanales.png" },
+            16: { nombre: "Tartas Personalizadas", precio: 32, desc: "Diseños únicos para eventos especiales.", img: "img/tartas personalizadas.png" },
+            17: { nombre: "Carrot Cake", precio: 30, desc: "Bizcocho húmedo de zanahoria con nueces y frosting de queso crema.", img: "img/Carrot cake.png" }
         };
 
-        // Obtener ID desde la URL
-        const params = new URLSearchParams(window.location.search);
-        const id = params.get("id");
-        const p = productos[id];
-
         window.onload = () => {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get("id");
+
+            const p = productos[id];
+
             if (!p) {
-                document.body.innerHTML = "<h1>Producto no encontrado</h1>";
+                document.body.innerHTML = "<h1 style='color:#b3004b;text-align:center;'>Producto no encontrado</h1>";
                 return;
             }
 
-            document.getElementById("img").src = p.img;
-            document.getElementById("nombre").innerText = p.nombre;
-            document.getElementById("desc").innerText = p.desc;
-            document.getElementById("precio").innerText = "€" + p.precio;
-
-            document.getElementById("whatsapp").href =
-                "https://wa.me/34622403795?text=Hola! Quiero pedir " + p.nombre + " por €" + p.precio;
+            document.getElementById("p-img").src = p.img;
+            document.getElementById("p-name").innerText = p.nombre;
+            document.getElementById("p-price").innerText = "€" + p.precio;
+            document.getElementById("p-desc").innerText = p.desc;
         };
     </script>
 
@@ -102,12 +114,18 @@
 <body>
 
     <div class="container">
-        <img id="img" src="">
-        <h1 id="nombre"></h1>
-        <p id="desc"></p>
-        <h2 id="precio" style="color:#b3004b;"></h2>
+        <img id="p-img" class="product-img">
 
-        <a id="whatsapp" class="btn" target="_blank">Pedir por WhatsApp</a>
+        <h1 id="p-name"></h1>
+
+        <div class="price" id="p-price"></div>
+
+        <div class="desc" id="p-desc"></div>
+
+        <button class="order-btn">
+            <img src="img/carro de compras.png">
+            Agregar al carrito
+        </button>
     </div>
 
 </body>
