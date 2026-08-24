@@ -384,14 +384,12 @@
             <h1 style="text-align:center; margin-bottom:12px; color:var(--muted); font-size:60px;">Productos</h1>
 
             <div class="grid">
-
-                <!-- Aquí van tus 17 productos, ya corregidos -->
-                <!-- (Los mantengo tal cual, solo corregí estructura y clases) -->
-
                 <!-- 1 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/cuadrados de brownie.jpg" alt="Cuadrados de Brownie">
+                        <a href="producto.html?id=1" target="_blank">
+                            <img src="img/cuadrados de brownie.jpg" alt="Cuadrados de Brownie">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Cuadrados de Brownie — €32</h3>
@@ -399,14 +397,13 @@
                         <div class="card-actions">
                             <a class="desc-btn" onclick="toggleDesc('desc1')">
                                 <img src="img/lupa.png" class="cart-icon">
-                                <a class="order-btn" onclick="addToCart('Producto', 16)">
-                                    <img src="img/carro de compras.png" class="cart-icon">
-                                </a>
-
-
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Cuadrados de Brownie', 32)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc1" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
+                        <div id="desc1" class="desc-box">
                             Brownie húmedo con base crocante y cobertura de chocolate.
                         </div>
                     </div>
@@ -415,19 +412,23 @@
                 <!-- 2 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/pastafrola de membrillo.png" alt="Mini Frolas">
+                        <a href="producto.html?id=2" target="_blank">
+                            <img src="img/pastafrola de membrillo.png" alt="Mini Frolas">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Mini Frolas — €16</h3>
-                        <p class="card-desc">Masa casera con dulce de membrillo, textura hojaldrada.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc2')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Mini Frolas', 16)">Agregar al carrito</a>
-
+                            <a class="desc-btn" onclick="toggleDesc('desc2')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Mini Frolas', 16)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc2" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
+                        <div id="desc2" class="desc-box">
                             Masa casera con dulce de membrillo, textura hojaldrada.
                         </div>
                     </div>
@@ -436,19 +437,24 @@
                 <!-- 3 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/alfajores de maicena.png" alt="Alfajores de Maicena">
+                        <a href="producto.html?id=3" target="_blank">
+                            <img src="img/alfajores de maicena.png" alt="Alfajores de Maicena">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Alfajores de Maicena — €18</h3>
-                        <p class="card-desc">Clásicos con dulce de leche y coco rallado.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc3')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Alfajores de Maicena', 18)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc3')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Alfajores de Maicena', 18)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc3" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
-                            Alfajores clásicos con dulce de leche y coco rallado.
+                        <div id="desc3" class="desc-box">
+                            Clásicos con dulce de leche y coco rallado.
                         </div>
                     </div>
                 </div>
@@ -456,19 +462,24 @@
                 <!-- 4 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/tartas de cumple.jpg" alt="Tarta de Cumpleaños">
+                        <a href="producto.html?id=4" target="_blank">
+                            <img src="img/tartas de cumple.jpg" alt="Tarta de Cumpleaños">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Tarta de Cumpleaños — €60</h3>
-                        <p class="card-desc">Bizcocho esponjoso decorado a pedido, personalizable.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc4')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Tarta de Cumpleaños', 60)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc4')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Tarta de Cumpleaños', 60)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc4" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
-                            Bizcocho esponjoso decorado a pedido, totalmente personalizable.
+                        <div id="desc4" class="desc-box">
+                            Bizcocho esponjoso decorado a pedido, personalizable.
                         </div>
                     </div>
                 </div>
@@ -476,19 +487,24 @@
                 <!-- 5 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/chocotorta.png" alt="Chocotorta">
+                        <a href="producto.html?id=5" target="_blank">
+                            <img src="img/chocotorta.png" alt="Chocotorta">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Chocotorta — €25</h3>
-                        <p class="card-desc">Capas de galletas con crema y dulce de leche.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc5')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Chocotorta', 25)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc5')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Chocotorta', 25)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc5" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
-                            Capas de galletas Chocolinas con crema y dulce de leche.
+                        <div id="desc5" class="desc-box">
+                            Capas de galletas con crema y dulce de leche.
                         </div>
                     </div>
                 </div>
@@ -496,19 +512,24 @@
                 <!-- 6 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/pastel primavera.png" alt="Pastel Primavera">
+                        <a href="producto.html?id=6" target="_blank">
+                            <img src="img/pastel primavera.png" alt="Pastel Primavera">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Pastel Primavera — €34</h3>
-                        <p class="card-desc">Bizcocho con frutas frescas y crema ligera.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc6')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Pastel Primavera', 34)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc6')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Pastel Primavera', 34)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc6" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
-                            Bizcocho suave con frutas frescas y crema chantilly ligera.
+                        <div id="desc6" class="desc-box">
+                            Bizcocho con frutas frescas y crema ligera.
                         </div>
                     </div>
                 </div>
@@ -516,19 +537,24 @@
                 <!-- 7 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/cuadrados de limon.png" alt="Cuadrados de Limón">
+                        <a href="producto.html?id=7" target="_blank">
+                            <img src="img/cuadrados de limon.png" alt="Cuadrados de Limón">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Cuadrados de Limón — €20</h3>
-                        <p class="card-desc">Cuadrados cítricos con glaseado y toque de merengue.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc7')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Cuadrados de Limón', 20)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc7')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Cuadrados de Limón', 20)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc7" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
-                            Cuadrados cítricos con glaseado de limón y merengue flameado.
+                        <div id="desc7" class="desc-box">
+                            Cuadrados cítricos con glaseado de limón y toque de merengue.
                         </div>
                     </div>
                 </div>
@@ -536,19 +562,24 @@
                 <!-- 8 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/mini cakes.png" alt="Mini Cakes">
+                        <a href="producto.html?id=8" target="_blank">
+                            <img src="img/mini cakes.png" alt="Mini Cakes">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Mini Cakes — €15</h3>
-                        <p class="card-desc">Bizcochos caseros esponjosos, ideales para meriendas.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc8')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Mini Cakes', 15)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc8')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Mini Cakes', 15)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc8" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
-                            Bizcochos caseros esponjosos, perfectos para acompañar el café.
+                        <div id="desc8" class="desc-box">
+                            Bizcochos caseros esponjosos, ideales para meriendas.
                         </div>
                     </div>
                 </div>
@@ -556,19 +587,24 @@
                 <!-- 9 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/torta rogel.png" alt="Torta Rogel">
+                        <a href="producto.html?id=9" target="_blank">
+                            <img src="img/torta rogel.png" alt="Torta Rogel">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Torta Rogel — €29</h3>
-                        <p class="card-desc">Capas finas con dulce de leche y merengue crocante.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc9')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Torta Rogel', 29)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc9')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Torta Rogel', 29)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc9" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
-                            Capas finas y crocantes con abundante dulce de leche y merengue italiano.
+                        <div id="desc9" class="desc-box">
+                            Capas finas con dulce de leche y merengue crocante.
                         </div>
                     </div>
                 </div>
@@ -576,19 +612,24 @@
                 <!-- 10 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/torta vintage.png" alt="Torta Vintage">
+                        <a href="producto.html?id=10" target="_blank">
+                            <img src="img/torta vintage.png" alt="Torta Vintage">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Torta Vintage — €48</h3>
-                        <p class="card-desc">Decoración retro personalizada para eventos.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc10')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Torta Vintage', 48)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc10')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Torta Vintage', 48)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc10" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
-                            Torta decorada estilo vintage con detalles retro totalmente personalizados.
+                        <div id="desc10" class="desc-box">
+                            Decoración retro personalizada para eventos.
                         </div>
                     </div>
                 </div>
@@ -596,19 +637,24 @@
                 <!-- 11 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/chessecake con frutos rojos.png" alt="Cheesecake">
+                        <a href="producto.html?id=11" target="_blank">
+                            <img src="img/chessecake con frutos rojos.png" alt="Cheesecake">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Cheesecake — €24</h3>
-                        <p class="card-desc">Cheesecake cremoso con frutos rojos.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc11')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Cheesecake', 24)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc11')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Cheesecake', 24)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc11" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
-                            Cheesecake cremoso con base de galleta y topping de frutos rojos frescos.
+                        <div id="desc11" class="desc-box">
+                            Cheesecake cremoso con frutos rojos.
                         </div>
                     </div>
                 </div>
@@ -616,19 +662,24 @@
                 <!-- 12 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/tarta brownie.png" alt="Tarta Brownie XL">
+                        <a href="producto.html?id=12" target="_blank">
+                            <img src="img/tarta brownie.png" alt="Tarta Brownie XL">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Tarta Brownie XL — €45</h3>
-                        <p class="card-desc">Versión grande del clásico brownie para compartir.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc12')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Tarta Brownie XL', 45)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc12')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Tarta Brownie XL', 45)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc12" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
-                            Brownie XL húmedo, intenso y perfecto para compartir en reuniones.
+                        <div id="desc12" class="desc-box">
+                            Brownie XL húmedo, intenso y perfecto para compartir.
                         </div>
                     </div>
                 </div>
@@ -636,19 +687,24 @@
                 <!-- 13 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/mix de alfajores.png" alt="Mix de Alfajores">
+                        <a href="producto.html?id=13" target="_blank">
+                            <img src="img/mix de alfajores.png" alt="Mix de Alfajores">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Mix de Alfajores — €22</h3>
-                        <p class="card-desc">Alfajores gourmet con baño de chocolate.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc13')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Mix de Alfajores', 22)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc13')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Mix de Alfajores', 22)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc13" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
-                            Mix de alfajores gourmet bañados en chocolate semiamargo y blanco.
+                        <div id="desc13" class="desc-box">
+                            Alfajores gourmet bañados en chocolate.
                         </div>
                     </div>
                 </div>
@@ -656,18 +712,23 @@
                 <!-- 14 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/Lemon pie.png" alt="Lemon Pie">
+                        <a href="producto.html?id=14" target="_blank">
+                            <img src="img/Lemon pie.png" alt="Lemon Pie">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Lemon Pie — €28</h3>
-                        <p class="card-desc">Clásico pie de limón con merengue dorado.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc14')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Lemon Pie', 28)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc14')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Lemon Pie', 28)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc14" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
+                        <div id="desc14" class="desc-box">
                             Pie de limón con crema cítrica y merengue italiano dorado.
                         </div>
                     </div>
@@ -676,19 +737,24 @@
                 <!-- 15 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/cookies artesanales.png" alt="Cookies Artesanales">
+                        <a href="producto.html?id=15" target="_blank">
+                            <img src="img/cookies artesanales.png" alt="Cookies Artesanales">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Cookies Artesanales — €12</h3>
-                        <p class="card-desc">Cookies caseras con chips de chocolate.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc15')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Cookies Artesanales', 12)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc15')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Cookies Artesanales', 12)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc15" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
-                            Cookies caseras con chips de chocolate y vainilla natural.
+                        <div id="desc15" class="desc-box">
+                            Cookies caseras con chips de chocolate.
                         </div>
                     </div>
                 </div>
@@ -696,19 +762,24 @@
                 <!-- 16 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/tartas personalizadas.png" alt="Tartas Personalizadas">
+                        <a href="producto.html?id=16" target="_blank">
+                            <img src="img/tartas personalizadas.png" alt="Tartas Personalizadas">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Tartas Personalizadas — €32</h3>
-                        <p class="card-desc">Diseños únicos para eventos especiales.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc16')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Tartas Personalizadas', 32)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc16')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Tartas Personalizadas', 32)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc16" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
-                            Tartas personalizadas para cumpleaños, eventos y celebraciones.
+                        <div id="desc16" class="desc-box">
+                            Diseños únicos para eventos especiales.
                         </div>
                     </div>
                 </div>
@@ -716,21 +787,27 @@
                 <!-- 17 -->
                 <div class="card">
                     <div class="card-media">
-                        <img src="img/Carrot cake.png" alt="Carrot Cake">
+                        <a href="producto.html?id=17" target="_blank">
+                            <img src="img/Carrot cake.png" alt="Carrot Cake">
+                        </a>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Carrot Cake — €30</h3>
-                        <p class="card-desc">Bizcocho húmedo de zanahoria con nueces y frosting de queso crema.</p>
 
                         <div class="card-actions">
-                            <a class="desc-btn" onclick="toggleDesc('desc17')">Descripción</a>
-                            <a class="order-btn" onclick="addToCart('Carrot Cake', 30)">Agregar al carrito</a>
+                            <a class="desc-btn" onclick="toggleDesc('desc17')">
+                                <img src="img/lupa.png" class="cart-icon">
+                            </a>
+                            <a class="order-btn" onclick="addToCart('Carrot Cake', 30)">
+                                <img src="img/carro de compras.png" class="cart-icon">
+                            </a>
                         </div>
 
-                        <div id="desc17" style="display:none;margin-top:10px;font-size:12px;color:#5a2a36;">
+                        <div id="desc17" class="desc-box">
                             Bizcocho húmedo de zanahoria con nueces y frosting de queso crema.
                         </div>
                     </div>
+                </div>
 
     </section>
 
