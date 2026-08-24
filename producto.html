@@ -24,7 +24,7 @@
         }
 
         .product-img {
-            width: 100%;
+            width: 50%;
             border-radius: 12px;
             margin-bottom: 20px;
         }
@@ -71,23 +71,22 @@
 
     <script>
         const productos = {
-            1: { nombre: "Cuadrados de Brownie", precio: 32, desc: "Brownie húmedo con base crocante y cobertura de chocolate.", img: "img/cuadrados de brownie.jpg" },
-            2: { nombre: "Mini Frolas", precio: 16, desc: "Masa casera con dulce de membrillo, textura hojaldrada.", img: "img/pastafrola de membrillo.png" },
-            3: { nombre: "Alfajores de Maicena", precio: 18, desc: "Clásicos con dulce de leche y coco rallado.", img: "img/alfajores de maicena.png" },
-            4: { nombre: "Tarta de Cumpleaños", precio: 60, desc: "Bizcocho esponjoso decorado a pedido, personalizable.", img: "img/tartas de cumple.jpg" },
-            5: { nombre: "Chocotorta", precio: 25, desc: "Capas de galletas con crema y dulce de leche.", img: "img/chocotorta.png" },
-            6: { nombre: "Pastel Primavera", precio: 34, desc: "Bizcocho con frutas frescas y crema ligera.", img: "img/pastel primavera.png" },
-            7: { nombre: "Cuadrados de Limón", precio: 20, desc: "Cuadrados cítricos con glaseado de limón y toque de merengue.", img: "img/cuadrados de limon.png" },
-            8: { nombre: "Mini Cakes", precio: 15, desc: "Bizcochos caseros esponjosos, ideales para meriendas.", img: "img/mini cakes.png" },
-            9: { nombre: "Torta Rogel", precio: 29, desc: "Capas finas con dulce de leche y merengue crocante.", img: "img/torta rogel.png" },
-            10: { nombre: "Torta Vintage", precio: 48, desc: "Decoración retro personalizada para eventos.", img: "img/torta vintage.png" },
-            11: { nombre: "Cheesecake", precio: 24, desc: "Cheesecake cremoso con frutos rojos.", img: "img/chessecake con frutos rojos.png" },
-            12: { nombre: "Tarta Brownie XL", precio: 45, desc: "Brownie XL húmedo, intenso y perfecto para compartir.", img: "img/tarta brownie.png" },
-            13: { nombre: "Mix de Alfajores", precio: 22, desc: "Alfajores gourmet bañados en chocolate.", img: "img/mix de alfajores.png" },
-            14: { nombre: "Lemon Pie", precio: 28, desc: "Pie de limón con crema cítrica y merengue italiano dorado.", img: "img/Lemon pie.png" },
-            15: { nombre: "Cookies Artesanales", precio: 12, desc: "Cookies caseras con chips de chocolate.", img: "img/cookies artesanales.png" },
-            16: { nombre: "Tartas Personalizadas", precio: 32, desc: "Diseños únicos para eventos especiales.", img: "img/tartas personalizadas.png" },
-            17: { nombre: "Carrot Cake", precio: 30, desc: "Bizcocho húmedo de zanahoria con nueces y frosting de queso crema.", img: "img/Carrot cake.png" }
+            1: { nombre: "Cuadrados de Brownie", precio: 32, desc: "Cuadrados de Brownies súper chocolatosos con nueces o sin ellas en caja de cartóon 20 Unidades de 4cm x 4cm CONSULTAR POR BROWNIE ENTERO El precio no incluye el envío. Los pedidos se realizan con 2 días de anticipación..", img: "img/cuadrados de brownie.jpg" },
+            2: { nombre: "Mini Frolas", precio: 16, desc: "Mini Frolas de Membrillo, masa sablee con un riquísimo dulce de Membrillo!8 Unidades de 5 cm cada una El precio no incluye el envío.Los pedidos se realizan con 2 días de anticipación..", img: "img/pastafrola de membrillo.png" },
+            3: { nombre: "Alfajores de Maicena", precio: 18, desc: "Uno de los placeres argentinos es el alfajor de Maicena!Se te deshacen en la boca mientras disfrutas de todo el dulce de leche y el coco en un sólo bocado!12 Alfajores de maicena rellenos de Dulce de leche.", img: "img/alfajores de maicena.png" },
+            4: { nombre: "Tarta de Cumpleaños", precio: 60, desc: "Bizcocho de vainilla o chocolate cubierta con Butter Cream americana o Ganache de chocolate 1 relleno(consultar por 2 rellenos) Dulce de leche Nata montada y fresas Dulce de leche y Óreos Ganache de chocolate El precio publicado corresponde a una tarta de 20 cm.De diámetro y 1.8 kg de peso El precio se ajustará dependiendo el decorado y accesorios de la Tarta Los pedidos se realizan con 4 días de anticipación.", img: "img / tartas de cumple.jpg" },
+            5: { nombre: "Chocotorta", precio: 25, desc: "Tarta Tradicional Argentina, compuesta de galletitas de chocolate y mousse de Dulce de leche, un combinado de queso crema y dulce de leche pastelero.De 16cm 25€ o de 20 cm. 30€ Consultar por cuadradas u otras medidas!Los pedidos se realizan con 4 días de anticipación.", img: "img/chocotorta.png" },
+            6: { nombre: "Pastel Primavera", precio: 34, desc: "Bizcocho de vainilla con 2 rellenos de crema y frutas de estación, decorado con Buttercream de choco blanco o Mousse de chocolate. Una corona de Frutas de estación. El bizcochuelo es de 16cm de diámetro. El pastel es para 10/12 personas. Los pedidos se realizan con 2 días de anticipación.", img: "img/pastel primavera.png" },
+            7: { nombre: "Cuadrados de Limón", precio: 20, desc: "Riquìsimos Lemonies con mucho cítrico y glacé por arriba.12 unidades 4x4 en cajita Take Away Pedidos con 48 hs de anticipación.", img: "img/cuadrados de limon.png" },
+            8: { nombre: "Mini Cakes", precio: 15, desc: "Mini Tarta con forma de Porción rellena de Crema Chantillí, o Butter Cream.Mini Tarta de 12cm decorada con flores de ButterCream y rellena con Dulce de leche o mermelada y fresas.Los pedidos se realizan con 2 días de anticipación", img: "img/mini cakes.png" },
+            9: { nombre: "Torta Rogel", precio: 29, desc: "Capas de Masa súper fina con capas de Dulce de leche, coronado con un rico merengue italiano!Diámetro de los discos 18cm Pedidos con 1 día de anticipación.", img: "img/torta rogel.png" }, 10: { nombre: "Torta Vintage", precio: 48, desc: "Decoración retro personalizada para eventos.", img: "img/torta vintage.png" },
+            11: { nombre: "Cheesecake", precio: 24, desc: "Tarta con base de galletitas, combinados con un rico queso cream Cheese, decorada con mermelada de fresa y frutos rojos De 16cm 16€ De 20 cm. 30€ Tarta con base de galletitas, combinados con un rico queso cream Cheese y crema de Pistacho De 16cm 16€ De 20 cm 30€ Los pedidos se realizan con 2 días de anticipación.", img: "img/chessecake con frutos rojos.png" },
+            12: { nombre: "Tarta Brownie XL", precio: 45, desc: "Una rica Tarta Brownie con nueces, nata por arriba con frutas de estación, Chocolates, alfajores, o lo que quieras ponerle! Brownie de 22cm. De diámetro. Los pedidos se realiza con 2 días de anticipación..", img: "img/tarta brownie.png" },
+            13: { nombre: "Mix de Alfajores", precio: 22, desc: "- 4 Alfajores de Maicena- 3 Mini alfajores bañados de chocolate- 3 Mini alfajores de coco y dulce de leche-2 Alfajores Cookie", img: "img/mix de alfajores.png" },
+            14: { nombre: "Lemon Pie", precio: 28, desc: "Tarta de Masa Sablé de vainilla con relleno de Lemon Curd, decorada con Merengue Italiano o Nata.De 22 cm. De diámetro.", img: "img/Lemon pie.png" },
+            15: { nombre: "Cookies Artesanales", precio: 12, desc: "Galletas de mantequilla vainilla o chocolate con chips, muchos sabores!Con chips de chocolate con chuches carrot cake de avena y chocolate cacao Consultar Temáticas y Cookies personalizadas El precio es equivalente a una cookie, mínimo de compra 4 unidades Los pedidos se realizan con 2 días de anticipación.", img: "img/cookies artesanales.png" },
+            16: { nombre: "Tartas Personalizadas", precio: 32, desc: "Bizcocho de vainilla o chocolate cubierta con Butter Cream 2 rellenosDulce de leche ButtercreamNata montada Crema Chantillí Dulce de leche y Óreos Ganache de chocolate negro o blanco El precio publicado corresponde al kg de Tarta, mímino de compra 2 kg.El precio se ajustará dependiendo el decorado y accesorios de la Tarta Los pedidos se realizan con 5 días de anticipación.", img: "img/tartas personalizadas.png" },
+            17: { nombre: "Carrot Cake", precio: 30, desc: "Tarta de zanahoria con 1 corte de frosting de queso y decorada por arriba con frosting y nueces.El precio publicado corresponde a una tarta de 20 cm de diámetro El precio se ajustará dependiendo el tamaño (también se puede pedir de 16 cm), el decorado y accesorios de la Tarta Los pedidos se realizan con 3 días de anticipación.", img: "img/Carrot cake.png" }
         };
 
 
